@@ -1,8 +1,27 @@
+To compile we used the  make command
+  $ make 
+ we will get like this.
+gcc -Wall -g -c proc.c
+gcc -Wall -g -c clock.c
+gcc -Wall -g -c mlfq.c
+gcc -Wall -g -c ioq.c
+gcc -Wall -g -c msq.c
+gcc -Wall -g -c shm.c
+gcc -Wall -g oss.c proc.o clock.o mlfq.o msq.o ioq.o shm.o -o oss -lrt
+gcc -Wall -g user.c proc.o clock.o msq.o ioq.o shm.o -o user
+
+After compilation we can find oss file which will be green color.
+2. Execute
+To execute the program
+use command ./oss
+we will get output in output.txt file
 
 
-
-
+Agining:
 To avoid starvation, we keep a dequeue age variable in each MLFQ,
 If a queue has not been dequeue for OLDEST_DEQUE_AGE, we check it for processes.
 If there are processes that have waited more than MAX_WAIT_AGE, they are moved
 to a higher priority queue.
+Version Control:
+I pushed all these files in to  github.
+/classes/OS/gorantla/gorantla.4/log
