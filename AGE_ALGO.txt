@@ -1,4 +1,0 @@
-To avoid starvation, we keep a dequeue age variable in each MLFQ,
-If a queue has not been dequeue for OLDEST_DEQUE_AGE, we check it for processes.
-If there are processes that have waited more than MAX_WAIT_AGE, they are moved
-to a higher priority queue.
